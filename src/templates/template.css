@@ -1,0 +1,4 @@
+.template {
+  background-color: rgba(63, 196, 196, 0.188);
+  height: calc(100vh - 150px);
+}
