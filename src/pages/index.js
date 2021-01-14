@@ -1,22 +1,51 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
+import "./index.css"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <main className="content landing">
+      <div>
+        <Img
+          className="content bg-image"
+          style={{ zIndex: "-2" }}
+          fluid={data.file.childImageSharp.fluid}
+          objectFit="cover"
+          opacity="0.5"
+          objectPosition="50% 50%"
+          alt="about-image"
+        />
+      </div>
+      <section className="inner">
+        <h1>Welcome to my guide</h1>
+        <p>
+          This App is the entire path that i took six months ago to become a
+          FrontEnd developer including all the tips and tricks and resources
+          that helped me !
+        </p>
+        <p>Give it shot and enjoy :)</p>
+        <button>
+          <Link to="/guide">start now</Link>
+        </button>
+      </section>
+    </main>
   </Layout>
 )
-
 export default IndexPage
+
+export const query = graphql`
+  {
+    file(relativePath: { eq: "hero.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

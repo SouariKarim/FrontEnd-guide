@@ -1,0 +1,43 @@
+.footer {
+  margin-top: 15px;
+  text-align: center;
+  padding: 15px 0;
+  height: 50px;
+  color: white;
+  background-image: radial-gradient(
+      circle at center center,
+      rgba(33, 33, 33, 0),
+      rgb(33, 33, 33)
+    ),
+    repeating-linear-gradient(
+      135deg,
+      rgb(33, 33, 33) 0px,
+      rgb(33, 33, 33) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgb(56, 56, 56) 0px,
+      rgb(56, 56, 56) 5px,
+      transparent 5px,
+      transparent 6px
+    ),
+    linear-gradient(90deg, rgb(33, 33, 33), rgb(33, 33, 33));
+  position: relative;
+}
+.footer::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: -8px;
+  height: 8px;
+  width: 100%;
+  background: #00bf8f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #001510,
+    #00bf8f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #00bf8f, #001510);
+}

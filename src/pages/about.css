@@ -1,0 +1,54 @@
+.inner-text {
+  display: grid;
+  place-content: center;
+  position: relative;
+  background-color: rgb(108, 56, 56);
+  color: white;
+}
+.inner-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  clip-path: circle(49.5% at 90% 27%);
+  background-color: tomato;
+  z-index: 1;
+}
+.inner-text::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 800px;
+  height: 800px;
+  clip-path: circle(49.5% at 19% 81%);
+  background-color: rgba(2, 87, 19, 0.2);
+  z-index: 1;
+}
+.inner-text .about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5px;
+  padding: 20px 30px;
+  z-index: 2;
+}
+
+.inner-text .about .about-text {
+  display: grid;
+  place-content: center;
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 24px;
+}
+.about-text h2 {
+  text-align: center;
+}
+.about-text p {
+  margin-top: 20px;
+}
+.about-text image {
+  border-radius: 10px;
+}

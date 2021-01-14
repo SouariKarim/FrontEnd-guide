@@ -1,0 +1,26 @@
+.guide {
+  background-color: rgba(63, 196, 196, 0.188);
+  height: calc(100vh - 150px);
+}
+.search {
+  display: grid;
+  place-content: center;
+  height: 150px;
+}
+.search input {
+  min-width: 500px;
+  border: none;
+  border-radius: 6px;
+}
+button {
+  padding: 10px 30px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.guide-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 15px;
+  min-height: 100px;
+  /* background-color: tomato; */
+}

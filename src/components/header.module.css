@@ -1,0 +1,67 @@
+header {
+  margin-bottom: 15px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  background-image: radial-gradient(
+      circle at center center,
+      rgba(33, 33, 33, 0),
+      rgb(33, 33, 33)
+    ),
+    repeating-linear-gradient(
+      135deg,
+      rgb(33, 33, 33) 0px,
+      rgb(33, 33, 33) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgb(56, 56, 56) 0px,
+      rgb(56, 56, 56) 5px,
+      transparent 5px,
+      transparent 6px
+    ),
+    linear-gradient(90deg, rgb(33, 33, 33), rgb(33, 33, 33));
+  color: #fff;
+  /* margin-bottom: 10px; */
+  height: 70px;
+  position: relative;
+}
+header::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -8px;
+  height: 8px;
+  width: 100%;
+  background: #00bf8f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #00bf8f,
+    #001510
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #00bf8f, #001510);
+}
+.header h1 {
+  color: #fff;
+}
+h1 span {
+  color: tomato;
+}
+ul {
+  display: flex;
+}
+ul li {
+  margin: 0 10px;
+}
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+ul li a:hover {
+  color: tomato;
+}
