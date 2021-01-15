@@ -13,7 +13,7 @@ const Guide = () => {
           <button> Search </button>
         </section>
         <div>
-          <Link to="/javascript">javascript</Link>
+          <Link to="/info/javascript">javascript</Link>
         </div>
         <section className="guide-content"></section>
       </main>

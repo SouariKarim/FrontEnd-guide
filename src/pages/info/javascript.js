@@ -1,11 +1,11 @@
 import React from "react"
 import Layout from "../../components/layout"
 import Link from "gatsby-link"
-import "./javascript.css"
+import styles from "./javascript.module.css"
 
 const Javascript = ({ data }) => (
   <Layout>
-    <div className="javascript">
+    <div className={styles.javascript}>
       <h1>Latest Posts</h1>
       <br />
       <br />
@@ -43,6 +43,7 @@ export const pageQuery = graphql`
             title
             date
             author
+            theme
           }
         }
       }
