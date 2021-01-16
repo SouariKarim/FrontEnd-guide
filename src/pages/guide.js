@@ -1,21 +1,36 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-
+import themes from "./theme"
 import "./guide.css"
 import Layout from "../components/layout"
 
-const Guide = () => {
+const Guide = ({ data }) => {
   return (
     <Layout>
       <main className="guide">
-        <section className="search">
+        {/* <section className="search">
           <input type="text" />
           <button> Search </button>
+        </section> */}
+
+        <section className="guide-content">
+          {themes.map((topic, index) => {
+            return (
+              <div key={index} className="content-card">
+                <Link to={`/guide/${topic.theme}`}>
+                  {/* <img src={require(`${topic.theme}`)} alt="javascript logo" /> */}
+                  <img
+                    src={require(`../images/themes/${topic.theme}.png`)}
+                    alt="javascript logo"
+                  />
+
+                  <h2>{topic.theme}</h2>
+                  <p>{topic.description}</p>
+                </Link>
+              </div>
+            )
+          })}
         </section>
-        <div>
-          <Link to="/info/javascript">javascript</Link>
-        </div>
-        <section className="guide-content"></section>
       </main>
     </Layout>
   )

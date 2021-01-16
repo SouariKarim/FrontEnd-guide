@@ -9,14 +9,15 @@ export default function Template({ data }) {
   return (
     <Layout>
       <div className="template">
-        {" "}
-        <Link to="/guide">Go Back</Link>
-        <hr />
-        <h1>{post.frontmatter.title}</h1>
-        <h4>
-          Posted by {post.frontmatter.author} on {post.frontmatter.date}
-        </h4>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <section className="template-content">
+          <Link to="/guide">Go Back</Link>
+          <hr />
+          <h1>{post.frontmatter.title}</h1>
+          <h4>
+            Posted by {post.frontmatter.author} on {post.frontmatter.date}
+          </h4>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </section>{" "}
       </div>
     </Layout>
   )

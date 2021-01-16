@@ -14,17 +14,17 @@ const Contact = ({ data }) => {
           </div>
           <form action="https://formspree.io/f/xpzokrrq" method="POST">
             <div>
-              <label for>Full name:</label> <br />
+              <label htmlFor="name">Full name:</label> <br />
               <input type="text" name="name" />
             </div>{" "}
             <hr />
             <div>
-              <label>Email:</label> <br />
+              <label htmlFor="email">Email:</label> <br />
               <input type="email" name="_replyto" />
             </div>{" "}
             <hr />
             <div>
-              <label>Message:</label> <br />
+              <label htmlFor="message">Message:</label> <br />
               <textarea
                 style={{
                   width: "100%",

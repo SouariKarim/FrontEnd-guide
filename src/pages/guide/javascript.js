@@ -12,16 +12,15 @@ const Javascript = ({ data }) => (
       <hr />
       <br />
       <br />
-      {data.allMarkdownRemark.edges.map(post => (
-        <div key={post.node.id}>
-          <h3>{post.node.frontmatter.title}</h3>
+      {data.allMarkdownRemark.nodes.map(post => (
+        <div key={post.id}>
+          <h3>{post.frontmatter.title}</h3>
           <small>
-            Posted by *** {post.node.frontmatter.author} on{" "}
-            {post.node.frontmatter.date}
+            Posted by *** {post.frontmatter.author} on {post.frontmatter.date}
           </small>
           <br />
           <br />
-          <Link to={post.node.frontmatter.path}>Read More</Link>
+          <Link to={post.frontmatter.path}>Read More</Link>
           <br />
           <br />
           <hr />
@@ -34,17 +33,17 @@ const Javascript = ({ data }) => (
 // you have to filter the query using the theme mentionned in the markdowns
 export const pageQuery = graphql`
   query BlogIndexQuery {
-    allMarkdownRemark {
-      edges {
-        node {
-          id
-          frontmatter {
-            path
-            title
-            date
-            author
-            theme
-          }
+    allMarkdownRemark(
+      filter: { frontmatter: { theme: { eq: "javascript" } } }
+    ) {
+      nodes {
+        id
+        frontmatter {
+          title
+          path
+          author
+          date
+          theme
         }
       }
     }
