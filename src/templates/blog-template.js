@@ -1,7 +1,8 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Link from "gatsby-link"
-import "./template.css"
+import "./template.scss"
 
 export default function Template({ data }) {
   const post = data.markdownRemark
@@ -11,11 +12,11 @@ export default function Template({ data }) {
       <div className="template">
         <section className="template-content">
           <Link to="/guide">Go Back</Link>
-          <hr />
-          <h1>{post.frontmatter.title}</h1>
-          <h4>
-            Posted by {post.frontmatter.author} on {post.frontmatter.date}
-          </h4>
+          {/* <hr /> */}
+          <h1>
+            {post.frontmatter.title} <small> {post.frontmatter.date} </small>{" "}
+          </h1>
+
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </section>{" "}
       </div>

@@ -1,0 +1,21 @@
+.javascript {
+  background-color: rgba(63, 196, 196, 0.188);
+  height: calc(100vh - 150px);
+  padding: 30px 30px;
+  font-size: 18px;
+  h1 {
+    text-align: center;
+  }
+  div {
+    padding: 20px 15px;
+    background-color: rgba(184, 150, 150, 0.324);
+    margin: 10px 0;
+    border-radius: 10px;
+  }
+  a {
+    color: black;
+  }
+  p {
+    margin: 10px 0;
+  }
+}

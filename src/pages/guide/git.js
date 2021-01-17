@@ -1,11 +1,10 @@
 import React from "react"
 import Layout from "../../components/layout"
-import { graphql } from "gatsby"
 
 import Link from "gatsby-link"
 import styles from "./styles/reset.module.scss"
 
-const Javascript = ({ data }) => (
+const git = ({ data }) => (
   <Layout>
     <div className={styles.javascript}>
       <h1>Latest Posts</h1>
@@ -21,8 +20,8 @@ const Javascript = ({ data }) => (
           <br />
           <br />
           <Link to={post.frontmatter.path}>read more</Link>
-          {/* 
-          <Link to={`/guide/${post.frontmatter.theme}${post.frontmatter.path}`}>
+
+          {/* <Link to={`/guide/${post.frontmatter.theme}${post.frontmatter.path}`}>
             Read More
           </Link> */}
         </div>
@@ -33,10 +32,8 @@ const Javascript = ({ data }) => (
 
 // you have to filter the query using the theme mentionned in the markdowns
 export const pageQuery = graphql`
-  query javascript {
-    allMarkdownRemark(
-      filter: { frontmatter: { theme: { eq: "javascript" } } }
-    ) {
+  query git {
+    allMarkdownRemark(filter: { frontmatter: { theme: { eq: "git" } } }) {
       nodes {
         id
         frontmatter {
@@ -52,4 +49,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default Javascript
+export default git

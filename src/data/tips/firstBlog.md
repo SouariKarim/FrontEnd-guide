@@ -1,9 +1,9 @@
 ---
-path: "/post-two"
+path: "/post-one"
 date: "2018-04-12"
-title: "My second Gatsby Post"
+title: "My first Gatsby Post"
 author: "Souari Karim"
-theme: "javascript"
+theme: "tips"
 ---
 
 What is Lorem Ipsum?

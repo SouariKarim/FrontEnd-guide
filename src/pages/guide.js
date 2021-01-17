@@ -21,7 +21,7 @@ const Guide = ({ data }) => {
                   {/* <img src={require(`${topic.theme}`)} alt="javascript logo" /> */}
                   <img
                     src={require(`../images/themes/${topic.theme}.png`)}
-                    alt="javascript logo"
+                    alt={`${topic.theme} logo`}
                   />
 
                   <h2>{topic.theme}</h2>

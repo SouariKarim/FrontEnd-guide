@@ -1,0 +1,25 @@
+.template {
+  background-color: rgba(63, 196, 196, 0.188);
+  height: calc(100vh - 150px);
+  font-size: 18px;
+
+  .template-content {
+    // width: 80%;
+    padding: 30px 30px;
+    h1 {
+      margin: 30px;
+    }
+    a {
+      font-size: 20px;
+      background-color: rgba(232, 123, 123, 0.482);
+      padding: 15px 30px;
+      border-radius: 8px;
+      color: black;
+      transition: all 0.4s ease;
+    }
+    a:hover {
+      background-color: rgba(230, 63, 51, 0.811);
+      color: white;
+    }
+  }
+}
