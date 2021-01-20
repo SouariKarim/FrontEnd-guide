@@ -1,6 +1,7 @@
 .landing {
   margin: 15px 0;
   position: relative;
+  overflow: hidden;
 }
 .landing .bg-image {
   position: absolute;

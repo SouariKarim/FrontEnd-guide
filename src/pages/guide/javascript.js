@@ -1,30 +1,38 @@
 import React from "react"
 import Layout from "../../components/layout"
-import { graphql } from "gatsby"
-
 import Link from "gatsby-link"
-import styles from "./styles/reset.module.scss"
+import styles from "../guide/styles/reset.module.scss"
 
 const Javascript = ({ data }) => (
   <Layout>
     <div className={styles.javascript}>
-      <h1>Latest Posts</h1>
+      <Link
+        style={{
+          display: "inline-block",
+          textAlign: "center",
+          margin: "0 auto",
+        }}
+        to="/guide"
+      >
+        Go Back
+      </Link>{" "}
       <br />
       <br />
       <hr />
       <br />
       <br />
       {data.allMarkdownRemark.nodes.map(post => (
-        <div className="card" key={post.id}>
+        <div key={post.id}>
           <h3>{post.frontmatter.title}</h3>
-          <p> {post.excerpt} </p>
+          <small>
+            Posted by *** {post.frontmatter.author} on {post.frontmatter.date}
+          </small>
           <br />
           <br />
-          <Link to={post.frontmatter.path}>read more</Link>
-          {/* 
-          <Link to={`/guide/${post.frontmatter.theme}${post.frontmatter.path}`}>
-            Read More
-          </Link> */}
+          <Link to={post.frontmatter.path}>Read More</Link>
+          <br />
+          <br />
+          <hr />
         </div>
       ))}
     </div>
@@ -33,7 +41,7 @@ const Javascript = ({ data }) => (
 
 // you have to filter the query using the theme mentionned in the markdowns
 export const pageQuery = graphql`
-  query javascript {
+  query BlogIndexQuery {
     allMarkdownRemark(
       filter: { frontmatter: { theme: { eq: "javascript" } } }
     ) {
@@ -46,7 +54,6 @@ export const pageQuery = graphql`
           date
           theme
         }
-        excerpt(pruneLength: 400)
       }
     }
   }

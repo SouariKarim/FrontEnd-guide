@@ -16,9 +16,10 @@ const IndexPage = ({ data }) => (
           style={{ zIndex: "-2" }}
           fluid={data.file.childImageSharp.fluid}
           objectFit="cover"
-          opacity="0.5"
+          fill-opacity="0.5"
           objectPosition="50% 50%"
           alt="about-image"
+          backgroundColor="rgba(255,255,255,0.5)"
         />
       </div>
       <section className="inner">

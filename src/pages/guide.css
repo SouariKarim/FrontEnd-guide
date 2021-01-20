@@ -1,5 +1,5 @@
 .guide {
-  background-color: rgba(63, 196, 196, 0.188);
+  /* background-color: rgba(63, 196, 196, 0.188); */
   height: auto;
 }
 .search {
@@ -33,11 +33,17 @@ button {
   display: inline-block;
   /* width: 30%; */
   height: 350px;
-  background-color: rgba(114, 27, 27, 0.199);
+  /* background-color: rgba(114, 27, 27, 0.199); */
   display: grid;
   place-content: center;
   text-align: center;
   padding: 10px 5px;
+
+  background: rgba(255, 255, 255, 0.324);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(9px);
+  border-radius: 10px;
 }
 .content-card img {
   width: 90px;
@@ -51,4 +57,5 @@ button {
 a {
   text-decoration: none;
   /* color: white; color: white; */
+  color: black;
 }

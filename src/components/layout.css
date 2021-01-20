@@ -7,10 +7,26 @@
 body {
   width: 80%;
   margin: 0 auto;
-  /* position: relative; */
   min-height: 100%;
 }
 .content {
   width: 100%;
   min-height: calc(100vh - 150px);
 }
+
+/* html {
+  height: 100%;
+}
+.main {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.footer {
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.header {
+  grid-row-start: 1;
+  grid-row-end: 2;
+} */

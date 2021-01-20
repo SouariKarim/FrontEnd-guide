@@ -10,7 +10,7 @@ const About = ({ data }) => {
       <main className="content  inner-text">
         <section className="about">
           <article className="about-text">
-            <h2>About</h2>
+            <h2>About Me</h2>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
               dignissimos. Aperiam pariatur at et reprehenderit molestias
@@ -21,26 +21,6 @@ const About = ({ data }) => {
               Exercitationem quam unde ullam sequi.
             </p>
           </article>
-          <div className="about-image">
-            <Img
-              style={{
-                borderRadius: "60px 0 20px 0",
-                zIndex: "2",
-                width: "100%",
-                maxWidth: "600px",
-                margin: "0 auto",
-                // objectFit: "none",
-                // objectPosition: "10px 20px",
-              }}
-              fluid={data.hero.childImageSharp.fluid}
-              objectFit="cover"
-              opacity="0.2"
-              objectPosition="90% 50%"
-              alt="about-image"
-            />
-          </div>
-        </section>
-        <section className="about">
           <div className="about-image">
             <Img
               style={{
@@ -61,18 +41,6 @@ const About = ({ data }) => {
               alt="about-image"
             />
           </div>
-          <article className="about-text">
-            <h2>About</h2>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-              dignissimos. Aperiam pariatur at et reprehenderit molestias
-              adipisci. Ex commodi minus, sint dolorum sunt in, necessitatibus,
-              doloribus corrupti modi odit praesentium reprehenderit iusto
-              dignissimos incidunt consectetur id quasi obcaecati quaerat
-              possimus aliquid magni accusantium odio perferendis?
-              Exercitationem quam unde ullam sequi.
-            </p>
-          </article>
         </section>
       </main>
     </Layout>
