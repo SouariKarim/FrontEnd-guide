@@ -41,15 +41,20 @@ const topic = [
   {
     theme: "graphql",
     description:
-      "  Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. ",
+      "  GraphQL is a query language for your API, and a server-side runtime for executing queries by using a type system you define for your data. ",
   },
   {
     theme: "github",
     description:
-      "  Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. ",
+      " GitHub is where over 56 million developers shape the future of software, together. ",
+  },
+  {
+    theme: "jquery",
+    description:
+      " jQuery is a JavaScript Library. jQuery greatly simplifies JavaScript programming. jQuery is easy to learn.  ",
   },
 ]
 
-console.log(toString(topic[0].logo))
+// console.log(toString(topic[0].logo))
 
 export default topic

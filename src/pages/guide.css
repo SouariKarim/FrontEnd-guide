@@ -28,6 +28,7 @@ button {
   /* background-color: tomato; */
 }
 .content-card {
+  position: relative;
   border-radius: 8px;
   font-size: 16px;
   display: inline-block;
@@ -46,8 +47,14 @@ button {
   border-radius: 10px;
 }
 .content-card img {
-  width: 90px;
-  margin: 0 auto 10px;
+  display: inline;
+  position: absolute;
+  top: 10px;
+  left: 10%;
+  /* margin-bottom: 50px; */
+  width: auto;
+  height: 70px;
+  /* margin: 0 auto 10px; */
 }
 .content-card h2 {
   margin-bottom: 10px;

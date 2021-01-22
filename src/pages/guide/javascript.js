@@ -1,6 +1,8 @@
 import React from "react"
 import Layout from "../../components/layout"
-import Link from "gatsby-link"
+import { graphql, Link } from "gatsby"
+
+// import Link from "gatsby-link"
 import styles from "../guide/styles/reset.module.scss"
 
 const Javascript = ({ data }) => (

@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import Img from "gatsby-image"
 import themes from "./theme"
 import "./guide.css"
 import Layout from "../components/layout"
@@ -9,7 +10,7 @@ import StyledBackgroundSection from "../components/GuideBackground"
 const Guide = ({ data }) => {
   return (
     <Layout>
-      <SEO title="guide" />
+      <SEO title="Guide" />
       <StyledBackgroundSection>
         <main className="guide">
           {/* <section className="search">
@@ -26,8 +27,9 @@ const Guide = ({ data }) => {
                     <img
                       src={require(`../images/themes/${topic.theme}.png`)}
                       alt={`${topic.theme} logo`}
-                    />
-
+                      // style={{ width: "50px", height: "50px" }}
+                    />{" "}
+                    {/* <small>{topic.theme}</small> */}
                     <h2>{topic.theme}</h2>
                     <p>{topic.description}</p>
                   </Link>
@@ -42,3 +44,14 @@ const Guide = ({ data }) => {
 }
 
 export default Guide
+
+// const guideQuery = graphql`
+// allImageSharp {
+//   nodes {
+//     fixed(width: 50) {
+//      ...GatsbyContentfulFixed
+//    }
+//  }
+// }
+
+// `
