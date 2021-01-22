@@ -15,16 +15,11 @@ const graphqlPage = ({ data }) => (
       <br />
       <br />
       {data.allMarkdownRemark.nodes.map(post => (
-        <div className="card" key={post.id}>
+        <div key={post.id}>
           <h3>{post.frontmatter.title}</h3>
-          <p> {post.excerpt} </p>
           <br />
-          <br />
-          <Link to={post.frontmatter.path}>read more</Link>
 
-          {/* <Link to={`/guide/${post.frontmatter.theme}${post.frontmatter.path}`}>
-            Read More
-          </Link> */}
+          <Link to={post.frontmatter.path}>Read More</Link>
         </div>
       ))}
     </div>
@@ -34,7 +29,10 @@ const graphqlPage = ({ data }) => (
 // you have to filter the query using the theme mentionned in the markdowns
 export const pageQuery = graphql`
   query graphqlQuery {
-    allMarkdownRemark(filter: { frontmatter: { theme: { eq: "graphql" } } }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { theme: { eq: "graphql" } } }
+    ) {
       nodes {
         id
         frontmatter {

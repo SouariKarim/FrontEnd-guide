@@ -26,15 +26,9 @@ const Javascript = ({ data }) => (
       {data.allMarkdownRemark.nodes.map(post => (
         <div key={post.id}>
           <h3>{post.frontmatter.title}</h3>
-          <small>
-            Posted by *** {post.frontmatter.author} on {post.frontmatter.date}
-          </small>
           <br />
-          <br />
+
           <Link to={post.frontmatter.path}>Read More</Link>
-          <br />
-          <br />
-          <hr />
         </div>
       ))}
     </div>
@@ -45,6 +39,7 @@ const Javascript = ({ data }) => (
 export const pageQuery = graphql`
   query BlogIndexQuery {
     allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { theme: { eq: "javascript" } } }
     ) {
       nodes {
