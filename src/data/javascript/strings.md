@@ -57,5 +57,5 @@ var str = text.trim()
 1. converting a string to an array
 
 ```javascript
-text.slipt("")
+text.split("")
 ```

@@ -56,13 +56,8 @@ theme: "html"
 
 #### Preformatted Text :
 
-Text in a <pre> element is displayed in a fixed-width font, and the text preserves both spaces and line breaks. The text will be displayed exactly as written in the HTML source code.
-
-Tag Description
-<code> Defines a piece of computer code
-<samp> Defines sample output from a computer program
-<kbd> Defines keyboard input
-<var> Defines a variable
+Text in a **pre** element is displayed in a fixed-width font, and the text preserves both spaces and line breaks.
+The text will be displayed exactly as written in the HTML source code.
 
 ```html
 <pre>
